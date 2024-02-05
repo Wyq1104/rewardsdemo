@@ -20,6 +20,17 @@ FOREIGN KEY(customer_id) REFERENCES customers(id),
 product_id INT,
 FOREIGN KEY(product_id) REFERENCES products(id),
 amount INT,
-timeStamp DATETIME,
-rewardAmount INT
-)
+time_created DATE,
+rewards INT
+);
+
+INSERT INTO transactions (id, customer_id, product_id, amount,time_created, rewards) VALUES ( 1, 1,2,10, '2023-11-11',200);
+INSERT INTO transactions (id, customer_id, product_id, amount,time_created, rewards) VALUES ( 2, 1,2,15, '2023-10-11',400);
+INSERT INTO transactions (id, customer_id, product_id, amount,time_created, rewards) VALUES ( 6, 1,3,20, '2023-10-1',200);
+INSERT INTO transactions (id, customer_id, product_id, amount,time_created, rewards) VALUES ( 7, 1,4,1, '2023-10-1',1800);
+INSERT INTO transactions (id, customer_id, product_id, amount,time_created, rewards) VALUES ( 3, 1,2,20, '2023-12-11',600);
+INSERT INTO transactions (id, customer_id, product_id, amount,time_created, rewards) VALUES ( 4, 2,2,15, '2023-10-11',400);
+INSERT INTO transactions (id, customer_id, product_id, amount,time_created, rewards) VALUES ( 5, 2,2,15, '2023-11-11',400);
+
+
+
